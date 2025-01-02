@@ -1,57 +1,16 @@
-# sudofox/shell-mommy
+no #### you you don't get a nice intro readme install this on your bash you'll be happy probably idk.
+### btw this is a work in progress i need to go on dynasty reader and grab some lines for you fine people
 
-Inspired by [Gankra/cargo-mommy](https://github.com/Gankra/cargo-mommy)
-
-This is a shell script that provides a `mommy` function which emulates a nurturing and supportive figure. The `mommy` function can be used to offer praise and encouraging responses to a user's actions, depending on the exit status of the command that is passed to it.
-
-By default, the text will be output in a light pink to stderr. You can change this to a light blue if you find that more encouraging.
+original credit to: sudofox/shell-mommy
 
 <img src="preview.png" alt="Example" ></a>
 
-
-I hope this will serve to improve the efficiency of your workflow and general mental health. Please use responsibly.
-
 ## Installation
 
-To use the `mommy` function, you can source the `shell-mommy.sh` script in your current shell or add it to your `~/.bashrc` file to have it available every time you open a new terminal.
-
-```
-. /path/to/shell-mommy.sh
-```
-
-If you'd like it to always show a message after each command, you can define a custom `PROMPT_COMMAND` like so:
+put the yuri bash code in a local bin folder, add that folder to your PATH, then force bash into calling yuri every single time you want to run the simplest command. isn't this fun?
 
 ```
 export PROMPT_COMMAND="mommy \\$\\(exit \$?\\); $PROMPT_COMMAND"
-```
-
-## Configuration
-
-The `mommy` function has several customizable options that can be set using environment variables:
-
-- `SHELL_MOMMYS_LITTLE`: Sets the affectionate term that `mommy` will use to refer to the user. The default value is "girl".
-- `SHELL_MOMMYS_PRONOUNS`: Sets the pronouns that `mommy` will use to refer to itself. The default value is "her".
-- `SHELL_MOMMYS_ROLES`: Sets the role that `mommy` will have. The default value is "mommy".
-- `SHELL_MOMMYS_COLOR`: Sets the color of the text output by `mommy`. The default value is a light pink color.
-- `SHELL_MOMMYS_ONLY_NEGATIVE`: If set to `true`, `mommy` will provide encouragement (on non-zero exit status) but not praise. This will keep clutter down if you intend to use `mommy` as a `PROMPT_COMMAND`.
-- `SHELL_MOMMYS_NEGATIVE_RESPONSES`/`SHELL_MOMMYS_POSITIVE_RESPONSES`: Sets the possible responses that `mommy` will use. This should be in the form of a bash array and will override the default responses. Want Samuel L. Jackson to chastise or compliment you? [Now you can!](https://github.com/sudofox/shell-mommy/issues/5#issuecomment-1381029744)
-
-To add multiple possible values, separate them with a forward slash, for example:
-
-```sh
-export SHELL_MOMMYS_LITTLE="child/girl/boy"
-# ...
-$ mommy ls
-README.md  shell-mommy.sh
-awe, what a good boy~
-mommy knew you could do it~ ❤️
-$ mommy ls
-README.md  shell-mommy.sh
-good girl~
-mommy's so proud of you~ ❤️
-$ mommy ls
-README.md  shell-mommy.sh
-mommy thinks her little child earned a big hug~ ❤️
 ```
 
 ## Usage
